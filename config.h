@@ -35,7 +35,7 @@
     //#define GIMBAL
     //#define BI
     //#define TRI
-    //#define QUADP
+    #define QUADP
     //#define QUADX
     //#define Y4
     //#define Y6
@@ -72,8 +72,8 @@
     #define MINCOMMAND  1000
 
   /**********************************  I2C speed for old WMP config (useless config for other sensors)  *************/
-    #define I2C_SPEED 100000L     //100kHz normal mode, this value must be used for a genuine WMP
-    //#define I2C_SPEED 400000L   //400kHz fast mode, it works only with some WMP clones
+    //#define I2C_SPEED 100000L     //100kHz normal mode, this value must be used for a genuine WMP
+     #define I2C_SPEED 400000L   //400kHz fast mode, it works only with some WMP clones
 
   /***************************    Internal i2c Pullups   ********************************/
     /* enable internal I2C pull ups (in most cases it is better to use external pullups) */
@@ -168,7 +168,7 @@
       //#define ITG3200
       //#define MPU3050
       //#define L3G4200D
-      //#define MPU6050       //combo + ACC
+      #define MPU6050       //combo + ACC
       //#define LSM330        //combo + ACC
       
       /* I2C accelerometer */
@@ -187,7 +187,7 @@
 
       /* I2C magnetometer */
       //#define HMC5843
-      //#define HMC5883
+      #define HMC5883
       //#define AK8975
       //#define MAG3110
 
@@ -201,8 +201,8 @@
       //#define ADCACC
 
       /* enforce your individual sensor orientation - even overrides board specific defaults */
-      //#define FORCE_ACC_ORIENTATION(X, Y, Z)  {imu.accADC[ROLL]  =  Y; imu.accADC[PITCH]  = -X; imu.accADC[YAW]  = Z;}
-      //#define FORCE_GYRO_ORIENTATION(X, Y, Z) {imu.gyroADC[ROLL] = -Y; imu.gyroADC[PITCH] =  X; imu.gyroADC[YAW] = Z;}
+//      #define FORCE_ACC_ORIENTATION(X, Y, Z)  {imu.accADC[ROLL]  =  Y; imu.accADC[PITCH]  = X; imu.accADC[YAW]  = Z;}
+//      #define FORCE_GYRO_ORIENTATION(X, Y, Z) {imu.gyroADC[ROLL] = -Y; imu.gyroADC[PITCH] =  -X; imu.gyroADC[YAW] = Z;}
       //#define FORCE_MAG_ORIENTATION(X, Y, Z)  {imu.magADC[ROLL]  =  X; imu.magADC[PITCH]  =  Y; imu.magADC[YAW]  = Z;}
 
       /* Board orientation shift */
@@ -559,7 +559,7 @@ At this moment you can use this function only with WinGUI 2.3 release. MultiWiiC
   //#define THROTTLE_ANGLE_CORRECTION 40
   
   /*** HEADFREE : the copter can be controled by an absolute stick orientation, whatever the yaw orientation ***/
-  //#define HEADFREE
+  #define HEADFREE
   
  /*************************        Advanced Headfree Mode             ********************/
  /* In Advanced Headfree mode when the copter is farther than ADV_HEADFREE_RANGE meters then 
@@ -1004,7 +1004,7 @@ Also note, that maqgnetic declination changes with time, so recheck your value e
     // for 328p proc
     //#define EXT_MOTOR_32KHZ
     //#define EXT_MOTOR_4KHZ
-    //#define EXT_MOTOR_1KHZ
+    #define EXT_MOTOR_1KHZ
   
     // for 32u4 proc
     //#define EXT_MOTOR_64KHZ
@@ -1161,7 +1161,7 @@ Also note, that maqgnetic declination changes with time, so recheck your value e
   /********************************************************************/
   /*                   !!! No Fly Mode !!!                            */ 
 
-    //#define DYNBALANCE   // (**) Dynamic balancing controlled from Gui
+    #define DYNBALANCE   // (**) Dynamic balancing controlled from Gui
 
   /********************************************************************/
   /****           Regression testing                               ****/
